@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<title>volume pharmacy</title>
+			<meta charset="utf-8"/>
+			<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			
+			<script src="js/wow.min.js"></script>
+			<script src="js/jssor.slider-23.1.6.min.js"></script>
+			<link rel="stylesheet" type="text/css" href="css/style.css"/>
+				<script type="text/javascript">
+				jssor_1_slider_init = function() {
+
+					var jssor_1_options = {
+					  $AutoPlay: 1,
+					  $AutoPlaySteps: 4,
+					  $SlideDuration: 160,
+					  $SlideWidth: 200,
+					  $SlideSpacing: 3,
+					  $Cols: 4,
+					  $ArrowNavigatorOptions: {
+						$Class: $JssorArrowNavigator$,
+						$Steps: 4
+					  },
+					  $BulletNavigatorOptions: {
+						$Class: $JssorBulletNavigator$,
+						$SpacingX: 1,
+						$SpacingY: 1
+					  }
+					};
+
+					var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+					/*responsive code begin*/
+					/*remove responsive code if you don't want the slider scales while window resizing*/
+					function ScaleSlider() {
+						var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+						if (refSize) {
+							refSize = Math.min(refSize, 809);
+							jssor_1_slider.$ScaleWidth(refSize);
+						}
+						else {
+							window.setTimeout(ScaleSlider, 30);
+						}
+					}
+					ScaleSlider();
+					$Jssor$.$AddEvent(window, "load", ScaleSlider);
+					$Jssor$.$AddEvent(window, "resize", ScaleSlider);
+					$Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+					/*responsive code end*/
+				};
+			</script>
+				
+				
+			<script>
+				$(document).ready(function(){
+			  // Add smooth scrolling to all links
+				$("a").on('click', function(event) {
+
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+				  // Prevent default anchor click behavior
+				  event.preventDefault();
+
+				  // Store hash
+				  var hash = this.hash;
+
+				  // Using jQuery's animate() method to add smooth page scroll
+				  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				  $('html, body').animate({
+					scrollTop: $(hash).offset().top
+				  }, 800, function(){
+			   
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				  });
+				} // End if
+			  });
+			});
+			</script>
+
+			<script>
+			// JavaScript Document
+			/* runner slide */
+
+
+				var mqAry1=[
+				['images/janssen.png',''],
+				['images/gsk.png',''],
+				['images/merck.png',''],
+				['images/lupin.png',''],
+				['images/sanofi.png',''],
+				['images/ipca.png',''],
+				['images/pfizer.png',''],
+				['images/menari.png',''],
+				['images/amway.png',''],
+				['images/glenmark.png',''],
+				['images/nov.png',''],];
+				
+
+
+
+			function start() {
+			   new mq('popular_institutes',mqAry1,220);
+			   //new mq('m2',mqAry2,60);// repeat for as many fields as required
+			   mqRotate(mqr); // must come last
+			}
+			window.onload = start;
+			var mqr = [];
+			 function mq(id,ary,wid){this.mqo=document.getElementById(id); 
+				var heit = this.mqo.style.height;
+				 this.mqo.onmouseout=function() {mqRotate(mqr);};
+				  this.mqo.onmouseover=function() {clearTimeout(mqr[0].TO);}; 
+				  this.mqo.ary=[];
+				   var maxw = ary.length; for (var i=0;i<maxw;i++){var img=document.createElement('img');
+					img.src=ary[i][0]; var lnk=document.createElement('a');
+					 lnk.href=ary[i][1]; lnk.appendChild(img); 
+					 this.mqo.ary[i]=document.createElement('div'); 
+					 this.mqo.ary[i].appendChild(lnk);
+					 this.mqo.ary[i].style.position = 'absolute'; 
+					 this.mqo.ary[i].style.left = (wid*i)+'px'; 
+					 this.mqo.ary[i].style.width = wid+'px'; 
+					 this.mqo.ary[i].style.height = heit; 
+					 this.mqo.appendChild(this.mqo.ary[i]);}
+
+					  mqr.push(this.mqo);} function mqRotate(mqr){if (!mqr) return; for (var j=mqr.length - 1; j > -1; j--) {maxa = mqr[j].ary.length; for (var i=0;i<maxa;i++){var x = mqr[j].ary[i].style;  x.left=(parseInt(x.left,10)-1)+'px';} var y = mqr[j].ary[0].style;
+
+					   if (parseInt(y.left,10)+parseInt(y.width,10)<0) {var z = mqr[j].ary.shift(); z.style.left = (parseInt(z.style.left) + parseInt(z.style.width)*maxa) + 'px'; mqr[j].ary.push(z);}} mqr[0].TO=setTimeout('mqRotate(mqr)',1);}
+
+			</script>
+
+
+
+			<script> 
+
+			// Select all links with hashes
+			$('a[href*="#"]')
+			  // Remove links that don't actually link to anything
+			  .not('[href="#"]')
+			  .not('[href="#0"]')
+			  .click(function(event) {
+				// On-page links
+				if (
+				  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+				  && 
+				  location.hostname == this.hostname
+				) {
+				  // Figure out element to scroll to
+				  var target = $(this.hash);
+				  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				  // Does a scroll target exist?
+				  if (target.length) {
+					// Only prevent default if animation is actually gonna happen
+					event.preventDefault();
+					$('html, body').animate({
+					  scrollTop: target.offset().top
+					}, 1000, function() {
+					  // Callback after animation
+					  // Must change focus!
+					  var $target = $(target);
+					  $target.focus();
+					  if ($target.is(":focus")) { // Checking if the target was focused
+						return false;
+					  } else {
+						$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+						$target.focus(); // Set focus again
+					  };
+					});
+				  }
+				}
+			  });
+
+
+			</script>
+			<!--navigation slow down script -->
+			<script>
+				$(document).ready(function(){
+
+				/** 
+				 * This part does the "fixed navigation after scroll" functionality
+				 * We use the jQuery function scroll() to recalculate our variables as the 
+				 * page is scrolled/
+				 */
+				$(window).scroll(function(){
+					var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
+					var div_top = $('#nav-anchor').offset().top;
+						if (window_top > div_top) {
+							$('nav').addClass('stick');
+						} else {
+							$('nav').removeClass('stick');
+						}
+				});
+
+				/**
+				 * This part causes smooth scrolling using scrollto.js
+				 * We target all a tags inside the nav, and apply the scrollto.js to it.
+				 */
+				$("nav a").click(function(evn){
+					evn.preventDefault();
+					$('html,body').scrollTo(this.hash, this.hash); 
+				});
+
+				/**
+				 * This part handles the highlighting functionality.
+				 * We use the scroll functionality again, some array creation and 
+				 * manipulation, class adding and class removing, and conditional testing
+				 */
+				var aChildren = $("nav li").children(); // find the a children of the list items
+				var aArray = []; // create the empty aArray
+				for (var i=0; i < aChildren.length; i++) {    
+					var aChild = aChildren[i];
+					var ahref = $(aChild).attr('href');
+					aArray.push(ahref);
+				} // this for loop fills the aArray with attribute href values
+
+				$(window).scroll(function(){
+					var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+					var windowHeight = $(window).height(); // get the height of the window
+					var docHeight = $(document).height();
+
+					for (var i=0; i < aArray.length; i++) {
+						var theID = aArray[i];
+						var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+						var divHeight = $(theID).height(); // get the height of the div in question
+						if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+							$("a[href='" + theID + "']").addClass("nav-active");
+						} else {
+							$("a[href='" + theID + "']").removeClass("nav-active");
+						}
+					}
+
+					if(windowPos + windowHeight == docHeight) {
+						if (!$("nav li:last-child a").hasClass("nav-active")) {
+							var navActiveCurrent = $(".nav-active").attr("href");
+							$("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+							$("nav li:last-child a").addClass("nav-active");
+						}
+					}
+				});
+			});
+
+			</script>
+
+			<!--animation-->
+						  <script>
+						  new WOW().init();
+						  </script>
+	</head>
+		
+		<body>
+			<div id="home">
+			<div id="head">
+				<figure></figure>
+				<figure></figure>
+				<figure></figure>
+
+			</div>
+			</div>
+			<header>
+				<div class="caps">
+					<div>
+						<img class="flogo" src="images/logo.png" alt="logo of the pharmacy"/>
+					</div>
+					<div id="main">
+					<div class="container6">
+					<div id="sidebar">
+					<div id="nav-anchor"></div>
+						<nav>
+							<ul>
+								<li><a href="#home" class="btn">Home</a></li>
+								<li><a href="#aboutus" class="btn">About</a></li>
+								<li><a href="#services" class="btn">Services</a></li>
+								<li><a href="#products" class="btn">Products</a></li>
+								<li><a href="#contactus" class="btn">Contact Us</a></li>
+								
+							</ul>
+						</nav>
+						</div>
+						</div>
+						</div>
+			</div>		
+			</header>
+			<div class="e1">
+			<div class="e2">
+				<div class="e3">
+					<h2>Enriching the patients health</h2>
+					<p>To keep in touch with our Volume pharmacy for further details <br>Please Login</p>
+				</div>
+			</div>
+			</div>
+			<div class="l">
+				<div class="l1">
+					<div class="l2">
+						<p><a href="login.html" class="a1">login</a></p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="hash">
+				<div class="hash1">
+					<a href="#target"><img src="images/but.png" alt="scroll icon"/></a>
+				</div>
+			</div>
+			
+			<div class="main1" id="target">
+				<h2 style="font-family:cursive">Welcome</h2>
+				<h3 class="m1">Our Pharmacy Specialization</h3>
+				<p class="m2">Volume pharmacy specialization that will enable our healthcare system to meet the mandate of controlling cost by improving medical outcomes.<br>
+				This will be accomplished through the provision of more care in community settings, as well as by reducing unnecessary hospital readmissions.<br></p>
+			</div>
+			
+			<div class="set" >
+			<div class="set-new">
+				
+				<div class="new-attri">
+				<div class="attri">
+
+				<h4>Our Objectives</h4>
+				<p class="obj"> We will be able to sell prescriptions at reduced prices by carefully maintaining efficiencies. </p>
+					<div class="overlay">
+					<img src="images/slice1.png" alt="objectives"/>
+					</div>
+				</div>
+				</div>
+				
+				<div class="new-attri">
+				<div class="attri">
+				<h4>Our Mission</h4>
+				<p class="obj">The Volume Pharmacy's mission is to provide our customers with the best prices for their prescription medications.<br></p>
+				<div class="overlay">
+					<img src="images/slice2.png" alt="objectives"/>
+					</div>
+				</div>
+				
+				</div>
+				
+				<div class="new-attri">
+				<div class="attri">
+				<h4>Products</h4>
+				<p class="obj">In order for a customer to purchase medications mail order, they must first contact The volume Pharmacy over the phone.</p>
+				<div class="overlay">
+					<img src="images/slice3.png" alt="objectives"/>
+					</div>
+				</div>
+				
+				</div>
+				
+				<div class="new-attri">
+				<div class="attri">
+				<h4>Our Services</h4>
+				<p class="obj"> Pharmacy Network Services provides a packaging system optimized for nursing convenience while also ensuring accuracy of dosage.<br></p>
+				<div class="overlay">
+					<img src="images/slice4.png" alt="objectives"/>
+					</div>
+				</div>
+				
+				</div>
+				</div>
+		
+			</div>
+			
+			 
+			<div class="about" id="aboutus">
+				<div class="about1">
+					
+						<h2 style="font-family: sans-serif;">About US</h2>
+					
+
+					<div class="about2 ">
+						<div class="sub-about">
+							<img src="images/abt.jpg" alt="about page"/>
+							<p class="pabout">Pharmacy made Easy. We are one of the certified pharmacy aggregators in India.
+							We help patients connect with local pharmacy stores and diagnostic centres in order to fulfil their extensive medical needs.
+							We believe that everyone should have access to good health.
+							with the highest savings in the shortest time possible.</p>
+						</div>
+					</div>
+					
+
+					<div class="about3">
+						<h3 class="habout">Our Advantages</h3>
+						<div class="uabout">
+							<ul>
+								<li>Target by multiple field selects</li>
+								<li>Pay only for delivered emails</li>
+								<li>Target by multiple field selects</li>
+								<li>Guaranteed 100% deliverable mailings</li>
+								<li>Complete reports to measure results</li>
+							</ul>
+						</div>
+					</div>
+					
+					</div>
+				</div>
+				 <div class="wow bounceInUp">
+			<div class="new-serv" id="services">
+			<div class="serv">
+				
+					<div class="wow flipInX"><h2 style="font-family:sans-serif" class="serv1">Services</h2></div>
+					<p class="p5">We deliver medicines to your doorstep free of cost and offer the convenience of getting your diagnostics tests done from the comfort of your home.</p>
+				
+				<div class="main-serv">
+				<div class="serv2">
+					
+						<img src="images/save.png" class="sr" alt="service1" />
+					
+						
+						<h3 style="font-size:20px" class="h3">20% Savings</h3>
+						<p style="font-family:sans-serif" class="p1">Flat 20% off on medicines</p>
+					
+				</div>
+				<div class="serv2">
+					
+					<img src="images/gen.png" class="sr" alt="service2" />
+				
+					
+						<h3 style="font-size:20px" class="h3">Genuine Medicines</h3>
+						<p style="font-family:sans-serif" class="p1">100% authentic medicines by licensed pharmacies</p>
+				
+				</div>
+				<div class="serv2">
+						<img src="images/family.png" class="sr" alt="service3"/>
+					
+					
+					
+						<h3 style="font-size:20px" class="h3">Family Medical Records</h3>
+						<p style="font-family:sans-serif" class="p1">One place for your family's medical records</p>
+					
+				</div>
+				<div class="serv2">
+					
+					<img src="images/free.png" class="sr" alt="service4"/>
+					
+					
+						<h3 style="font-size:20px" class="h3">Free Home Delivery</h3>
+						<p style="font-family:sans-serif" class="p1">Delivery at your doorstep</p>
+					
+				</div>
+				</div>
+				
+			</div>
+			</div>
+			
+			<div class="product" id="products">
+				<div class="product1">
+					<div class="product2">
+						<h2>Products</h2>
+						<p class="pro1">At our Volume Pharmacy, we provide some of the finest brands in cosmetics, makeup, pharmaceuticals, and more! These renowned products offer the best treatment, look, and value for your money to be found anywhere. And now, they are within reach of anyone in the country. Cruise our online pharmacy, make your purchase, and your chosen product will be sent directly to your door. </p>
+						<div id="jssor_1" style="position:relative;margin:0 auto;top:50px;left:0px;width:809px;height:150px;overflow:hidden;visibility:hidden;">
+			<!-- Loading Screen -->
+			<div data-u="loading" style="position:absolute;top:0px;left:0px;background:url('img/loading.gif') no-repeat 50% 50%;background-color:rgba(0, 0, 0, 0.7);"></div>
+			<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:809px;height:150px;overflow:hidden;">
+				<div>
+					<img data-u="image" src="images/johnson.png" alt="baby johnson" />
+					<p>Add to cart</p>
+				</div>
+				<div>
+					<img data-u="image" src="images/himalaya.jpg" alt="himalaya" />
+				</div>
+				<div>
+					<img data-u="image" src="images/ensure.jpg" alt="ensure powder" />
+				</div>
+				<div>           
+					<img data-u="image" src="images/bprotin.jpg" alt="bprotin powder" />
+				</div>
+				<div>
+					<img data-u="image" src="images/dprotin.jpg" alt="dprotin powder" />
+				</div>
+				<div>
+					<img data-u="image" src="images/pedia.jpg" alt="pediasure " />
+				</div>
+				<div>
+					<img data-u="image" src="images/propl.jpg" alt="propl" />
+				</div>
+				<div>
+					<img data-u="image" src="images/garnier.png" alt="garnier products" />
+				</div>
+				<div>
+					<img data-u="image" src="images/ponds.jpg" alt="ponds products" />
+				</div>
+				<div>
+					<img data-u="image" src="images/diabetes.jpg" alt="medicine" />
+				</div>
+				<div>
+					<img data-u="image" src="images/bp.jpg" alt="bloodpressure kit" />
+				</div>
+				<div>
+					<img data-u="image" src="images/surgical.jpg" alt="surgical kit" />
+				</div>
+				<div>
+					<img data-u="image" src="images/olay.jpg" alt="olay products" />
+				</div>
+				<div>
+					<img data-u="image" src="images/sunp.jpg" alt="sunpharma" />
+				</div>
+				<div>
+					<img data-u="image" src="images/firstaid.jpg" alt="firstaid" />
+				</div>
+				<div>
+					<img data-u="image" src="images/food2.jpg" alt="food2" />
+				</div>
+				<div>
+					<img data-u="image" src="images/food3.jpg" alt="food3" />
+				</div>
+				
+				<a data-u="any" href="https://wordpress.org/plugins/jssor-slider/" style="display:none">wordpress banner rotator</a>
+			</div>
+			<!-- Bullet Navigator -->
+			<div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+				<!-- bullet navigator item prototype -->
+				<div data-u="prototype" style="width:21px;height:21px;">
+					<div data-u="numbertemplate"></div>
+				</div>
+			</div>
+			<!-- Arrow Navigator -->
+			<span data-u="arrowleft" class="jssora03l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+			<span data-u="arrowright" class="jssora03r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+			</div>
+			<script type="text/javascript">jssor_1_slider_init();</script>
+			<!-- #endregion Jssor Slider End -->
+				</div>
+					</div>
+			</div>
+		
+			
+
+			<div class="brand">
+				<div class="brand1">
+					<h2 class="brand2">Brands</h2>
+				<div  id="popular_institutes" class="popular_institute_logo">
+				
+				</div>
+			</div>
+			</div>
+			
+			<div class="contact1" id="contactus">
+				<div class="contact2">
+				
+				<h2>Contact Us</h2>
+				<p>You can contact us any way that is convenient for you. We are available 24/7 via fax or email. <br>You can also use a quick contact form below or visit us personally. We would be happy to answer your questions.</p>
+				
+					<div class="container">
+						<form action="/action_page.php">
+						<label for="fname"></label>
+						<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+						<label for="lname"></label>
+						<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+						
+						<label for="email"></label>
+						<input type="text" id="email" name="email" placeholder="E-mail">
+						<label for="subject"></label>
+						<textarea id="subject" name="subject" placeholder="Comment" style="height:200px;"></textarea>
+
+						<input type="submit" value="Submit"/>
+					</form>
+					</div>
+					<div class="container1">
+						<div class="c1">
+						<img src="images/mobile.png" alt="contact by phone"/>
+						<p>+9600570988</p>
+						</div>
+						<div class="c1">
+							<img src="images/email.png" alt="contact by email"/>
+							<p>shaikhmuzaker@gmail.com</p>
+						</div>
+						<div class="c1">
+							<img src="images/location.png" alt="contact by location"/>
+							<p>2130 Fulton Street San Diego,CA 94117-1080 USA</p>
+						</div>
+						
+					</div>
+					
+				</div>
+					</div>
+				</div>
+			
+		
+			
+				<footer>
+					<div class="foot">
+					<div id="map" style="width:100%;height:400px;background:yellow">
+					<script>
+						function myMap() {
+						var mapCanvas = document.getElementById("map");
+						var mapOptions = {
+						center: new google.maps.LatLng(12.941662, 77.632590), zoom: 10
+						};
+						var map = new google.maps.Map(mapCanvas, mapOptions);
+						}
+					</script>
+
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApsrFy5Aqfw71m4crDb-v9XNfFFKy7dNY&callback=myMap"></script>
+					</div>
+				<div class="cont2">
+				<div class="cont3">
+					<div class="cont">
+
+					<div class="cont1">
+						<img src="images/mobile.png" alt="contact by phone" />
+						<p>+9600570988</p>
+					</div>
+					</div>
+					<div class="cont">
+					<div class="cont1">
+						<img src="images/location.png" alt="contact by location" />
+						
+						<p>2130 Fulton Street San Diego,<br>CA 94117-1080 USA</p>
+					</div>
+					</div>
+					<div class="cont dg">
+					<div class="cont1">
+						<img src="images/email.png" alt="contact by email"/>
+						
+						<p>shaikhmuzaker@gmail.com</p>
+					</div>
+					</div>
+				</div>
+				</div>
+					<div class="login">
+					<div class="log">
+					<img src="images/logo.png" alt="logo pharmacy"/>
+						
+					</div>
+					<div class="copy">
+					 <p>&copy;2017 All Rights Reserved Terms of Use and Privacy Policy</p>
+					</div>
+					<div class="logo">
+						<a href="https://www.facebook.com/shaikh.muzaker" target="_blank" class="fa fa-facebook"></a>
+						<a href="https://plus.google.com/u/0/106561278494440081497" target="_blank" class="fa fa-google"></a>
+						<a href="https://www.linkedin.com/in/muzakeer-shaikh-b2a091125/" target="_blank" class="fa fa-linkedin"></a>
+						<a href="https://www.instagram.com/muzakeer/" target="_blank" class="fa fa-instagram"></a>
+					</div>
+					</div>	
+					
+				</div>
+				</footer>
+		</body>
+
+
+
+</html>
